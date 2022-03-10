@@ -4,6 +4,11 @@ import { useParams } from 'react-router-dom';
 
 const DogShow = () => {
   const [dog, setDog] = React.useState(null);
+  const [likes, setLikes] = React.useState(0);
+
+  const handleIncrement = () => {
+    setLikes(likes + 1);
+  };
 
   const { point } = useParams();
 
@@ -53,6 +58,24 @@ const DogShow = () => {
 
                 <h4 className="title is-4">Temperament:</h4>
 
+                <p>{likes}</p>
+                <button onClick={handleIncrement}>
+                  <span>😍 </span> Counter
+                </button>
+              </div>
+              <div className="column is-half">
+                <h4 className="title is-8">Breed Group:</h4>
+                <hr />
+                <p>{dog.breed_group}</p>
+                <hr />
+                <h4 className="title is-4">Origin:</h4>
+                <hr />
+                <p>{dog.origin}</p>
+                <h4 className="title is-4">Lifespan:</h4>
+                <hr />
+                <p>{dog.life_span}</p>
+                <h4 className="title is-4">Temperament:</h4>
+                <hr />
                 <p>{dog.temperament}</p>
               </div>
             </div>

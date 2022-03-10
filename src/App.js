@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { getAllDogs } from './lib/api';
 
+// import { getAllDogs } from './lib/api';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Footer from './components/Footer';

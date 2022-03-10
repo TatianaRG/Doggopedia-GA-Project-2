@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DogCard = ({
-  id,
-  name,
-  breed_group,
-  life_span,
-  temperament,
-  origin,
-  image,
-}) => {
-  //console.log(name);
+const DogCard = ({ id, name, breed_group, temperament, image }) => {
+  const [likes, setLikes] = React.useState(0);
+
+  const handleIncrement = () => {
+    setLikes(likes + 1);
+  };
+
+  const handleDecrement = () => {
+    setLikes(likes - 1);
+  };
   return (
     <div className="column $tile-header-shadow is-one-quarter-desktop is-one-third-tablet">
       <Link to={`/dogs/${name.toLowerCase()}`}>
