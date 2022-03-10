@@ -3,17 +3,18 @@ import { Link } from 'react-router-dom';
 
 const DogCard = ({ id, name, breed_group, temperament, image }) => {
   const [likes, setLikes] = React.useState(0);
-
+  window.localStorage.setItem(parseInt('likes', likes));
   const handleIncrement = () => {
     setLikes(likes + 1);
   };
 
-  const handleDecrement = () => {
-    setLikes(likes - 1);
-  };
+  const likeBtn = localStorage.getItem('likes');
+
   return (
     <div className="column $tile-header-shadow is-one-quarter-desktop is-one-third-tablet">
-      <Link to={`/dogs/${name.toLowerCase()}`}>
+      <Link to={`/dogs/${name.toLowerCase()}`>
+        
+
         {/* <div className='card'>
           <div className='card-header'>
             <h2 className='card-header-title'>{name}</h2>
@@ -25,10 +26,10 @@ const DogCard = ({ id, name, breed_group, temperament, image }) => {
             </p>
             <figure className="image is-5by5">
               <img id="doggo" src={image.url} alt={name} />
+
             </figure>
           </article>
         </div>
-        {/* </div> */}
       </Link>
     </div>
   );
