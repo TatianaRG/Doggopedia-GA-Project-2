@@ -4,11 +4,16 @@ import { useParams } from 'react-router-dom';
 
 const DogShow = () => {
   const [dog, setDog] = React.useState(null);
-  const [likes, setLikes] = React.useState(0);
+  const [likes, setLikes] = React.useState(
+    parseInt(localStorage.getItem('likes')) || 0
+  );
 
   const handleIncrement = () => {
+    window.localStorage.setItem('likes', parseInt(likes));
     setLikes(likes + 1);
   };
+
+  const likeBtn = localStorage.getItem('likes');
 
   const { point } = useParams();
 
