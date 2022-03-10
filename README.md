@@ -1,2 +1,1 @@
-# Project-2_Doggopedia
-Project2-GA
+# project-2-demo
