@@ -19,8 +19,8 @@ const DogIndex = () => {
   }, []);
 
   return (
-    <section className="section1">
-      <div className="container">
+    <section className="section1" id="dog-section">
+      <div className="container is-dark">
         <div className="columns is-multiline">
           {!dogs ? (
             <p> Loading...</p>
