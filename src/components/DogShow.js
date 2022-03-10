@@ -2,6 +2,10 @@ import React from 'react';
 import { getSingleDog } from '../lib/api';
 import { useParams } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 const DogShow = () => {
   const [dog, setDog] = React.useState(null);
   const [likes, setLikes] = React.useState(
@@ -39,49 +43,44 @@ const DogShow = () => {
           <p>Loading...</p>
         ) : (
           <div>
-            <h2 className="title has-text-centered">Name: {dog.name}</h2>
+            <h2 className="title has-text-centered">
+              <p>
+                <FontAwesomeIcon icon={faDog} /> {dog.name}
+              </p>
+            </h2>
             <hr />
-            <div className="columns">
+            <div className="columns ">
               <div className="column is-8">
                 <figure className="image is-4by4">
                   <img
                     src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                     alt={dog.name}
+                    id="image-rounded"
                   />
                 </figure>
               </div>
 
-              <div className="column is-two-thirds-desktop is-light">
-                <h4 className="title is-4">
-                  Breed Group: <span>{dog.breed_group}</span>
-                </h4>
+              <div className="column is-two-thirds-desktop">
+                <h4 className="title is-4">Breed Group:</h4>
+                <span id="show">{dog.breed_group}</span>
                 <hr id="hr1" />
 
-                <h4 className="title is-4">
-                  Lifespan: <span>{dog.life_span}</span>
-                </h4>
+                <h4 className="title is-4">Lifespan:</h4>
+                <span id="show">{dog.life_span}</span>
+                <hr id="hr1" />
 
-                <h4 className="title is-4">Temperament:</h4>
+                <h4 className="title is-4">Temperament: </h4>
+                <span id="show">{dog.temperament}</span>
 
                 <p>{likes}</p>
                 <button onClick={handleIncrement}>
-                  <span>😍 </span> Counter
+                  <span>
+                    <p>
+                      <FontAwesomeIcon icon={faHeart} />
+                    </p>
+                  </span>{' '}
+                  Like
                 </button>
-              </div>
-              <div className="column is-half">
-                <h4 className="title is-8">Breed Group:</h4>
-                <hr />
-                <p>{dog.breed_group}</p>
-                <hr />
-                <h4 className="title is-4">Origin:</h4>
-                <hr />
-                <p>{dog.origin}</p>
-                <h4 className="title is-4">Lifespan:</h4>
-                <hr />
-                <p>{dog.life_span}</p>
-                <h4 className="title is-4">Temperament:</h4>
-                <hr />
-                <p>{dog.temperament}</p>
               </div>
             </div>
           </div>
@@ -92,3 +91,19 @@ const DogShow = () => {
 };
 
 export default DogShow;
+
+// <div className="column is-half is-dark">
+//   <h4 className="title is-8">Breed Group:</h4>
+//   <hr />
+//   <p>{dog.breed_group}</p>
+//   <hr />
+//   <h4 className="title is-4">Origin:</h4>
+//   <hr />
+//   <p>{dog.origin}</p>
+//   <h4 className="title is-4">Lifespan:</h4>
+//   <hr />
+//   <p>{dog.life_span}</p>
+//   <h4 className="title is-4">Temperament:</h4>
+//   <hr />
+//   <p>{dog.temperament}</p>
+// </div>;

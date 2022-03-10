@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='footer has-background-light'>
-      <div className='content has-text-centered'>
+    <footer className="footer has-background-light">
+      <div className="content has-text-centered">
         <p>
-          <strong>2022 GA SEI62</strong> build with Bulma
+          <strong>2022 SEI62</strong>
         </p>
       </div>
     </footer>

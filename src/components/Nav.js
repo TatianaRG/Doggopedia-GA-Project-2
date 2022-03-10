@@ -13,8 +13,7 @@ const Nav = () => {
             <Link to="/dogs " className="navbar-item">
               Index
             </Link>
-
-            <div className="field has-addons  ">
+            <div className="field has-addons">
               <div className="control">
                 <input
                   className="input is-rounded is-medium"
@@ -26,6 +25,7 @@ const Nav = () => {
                 <a className="button is-grey is-rounded is-medium">Search</a>
               </div>
             </div>
+            ;
           </div>
         </div>
       </nav>
