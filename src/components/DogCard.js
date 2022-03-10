@@ -19,7 +19,7 @@ const DogCard = ({ id, name, breed_group, temperament, image }) => {
           <div className='card-header'>
             <h2 className='card-header-title'>{name}</h2>
           </div> */}
-        <div className="tile is-parent">
+        <div className="tile is-parent" id="cards">
           <article className="tile is-child notification is-grey">
             <p id="card-title" className="title is-4">
               {name}
