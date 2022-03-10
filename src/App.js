@@ -9,13 +9,18 @@ import DogIndex from './components/DogIndex';
 import DogShow from './components/DogShow';
 
 function App() {
+  const [search, setSearch] = React.useState('');
+
   return (
     <BrowserRouter>
-      <Nav />
+      <Nav search={search} setSearch={setSearch} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dogs" element={<DogIndex />} />
-        <Route path="/dogs/:point" element={<DogShow />} />
+        <Route path='/' element={<Home />} />
+        <Route
+          path='/dogs'
+          element={<DogIndex search={search} setSearch={setSearch} />}
+        />
+        <Route path='/dogs/:point' element={<DogShow />} />
       </Routes>
       <Footer />
     </BrowserRouter>

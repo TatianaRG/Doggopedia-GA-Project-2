@@ -2,7 +2,7 @@ import React from 'react';
 import { getAllDogs } from '../lib/api';
 import DogCard from './DogCard';
 
-const DogIndex = () => {
+const DogIndex = ({ search, setSearch }) => {
   const [dogs, setDogs] = React.useState(null);
 
   React.useEffect(() => {
@@ -17,15 +17,22 @@ const DogIndex = () => {
     };
     getData();
   }, []);
+  console.log(setSearch);
+
+  function filterDogs() {
+    return dogs.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }
 
   return (
-    <section className="section1" id="dog-section">
-      <div className="container is-dark">
-        <div className="columns is-multiline">
+    <section className='section1' id='dog-section'>
+      <div className='container is-dark'>
+        <div className='columns is-multiline'>
           {!dogs ? (
             <p> Loading...</p>
           ) : (
-            dogs.map((item) => <DogCard key={item.id} {...item} />)
+            filterDogs().map((item) => <DogCard key={item.id} {...item} />)
           )}
         </div>
       </div>
