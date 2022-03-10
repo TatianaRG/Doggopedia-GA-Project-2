@@ -37,50 +37,52 @@ const DogShow = () => {
   }, [point]);
 
   return (
-    <section className='section1'>
-      <div className='container'>
+    <section className="section1">
+      <div className="container">
         {!dog ? (
           <p>Loading...</p>
         ) : (
           <div>
-            <h2 className='title has-text-centered'>
+            <h2 className="title has-text-centered">
               <p>
                 <FontAwesomeIcon icon={faDog} /> {dog.name}
               </p>
             </h2>
             <hr />
-            <div className='columns '>
-              <div className='column is-8'>
-                <figure className='image is-4by4'>
+            <div className="columns ">
+              <div className="column is-8">
+                <figure className="image is-4by4">
                   <img
                     src={`https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`}
                     alt={dog.name}
-                    id='image-rounded'
+                    id="image-rounded"
                   />
                 </figure>
               </div>
 
-              <div className='column is-two-thirds-desktop'>
-                <h4 className='title is-4'>Breed Group:</h4>
-                <span id='show'>{dog.breed_group}</span>
-                <hr id='hr1' />
+              <div className="column is-two-thirds-desktop">
+                <h4 className="title is-4">Breed Group:</h4>
+                <span id="show">{dog.breed_group}</span>
+                <hr id="hr1" />
 
-                <h4 className='title is-4'>Lifespan:</h4>
-                <span id='show'>{dog.life_span}</span>
-                <hr id='hr1' />
+                <h4 className="title is-4">Lifespan:</h4>
+                <span id="show">{dog.life_span}</span>
+                <hr id="hr1" />
 
-                <h4 className='title is-4'>Temperament: </h4>
-                <span id='show'>{dog.temperament}</span>
-
-                <p>{likes}</p>
-                <button onClick={handleIncrement}>
-                  <span>
-                    <p>
-                      <FontAwesomeIcon icon={faHeart} />
-                    </p>
-                  </span>{' '}
-                  Like
-                </button>
+                <h4 className="title is-4">Temperament: </h4>
+                <span id="show">{dog.temperament}</span>
+                <hr id="hr1" />
+                <div>
+                  <p>{likes}</p>
+                  <button onClick={handleIncrement}>
+                    <span>
+                      <p>
+                        <FontAwesomeIcon icon={faHeart} />
+                      </p>
+                    </span>
+                    Like
+                  </button>
+                </div>
               </div>
             </div>
           </div>

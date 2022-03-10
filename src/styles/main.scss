@@ -1,4 +1,9 @@
 @import '~bulma/bulma.sass';
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+
+* {
+  font-family: 'Padauk', sans-serif;
+}
 
 .hero {
   background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
@@ -21,6 +26,7 @@
 }
 #dog-section {
   padding: 5rem 7.5rem;
+  padding-top: 2rem;
 }
 #section_dog_show {
   display: flex;
@@ -44,4 +50,12 @@
 }
 #cards {
   box-shadow: -7px -1px 23px -4px rgba(0, 0, 0, 0.56);
+}
+#searchinput {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: bottom 0;
+  padding-top: 5rem;
 }
