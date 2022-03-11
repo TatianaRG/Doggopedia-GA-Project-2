@@ -13,14 +13,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Nav search={search} setSearch={setSearch} />
+      <Nav />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route
-          path='/dogs'
+          path="/dogs"
           element={<DogIndex search={search} setSearch={setSearch} />}
         />
-        <Route path='/dogs/:point' element={<DogShow />} />
+        <Route path="/dogs/:point" element={<DogShow />} />
       </Routes>
       <Footer />
     </BrowserRouter>

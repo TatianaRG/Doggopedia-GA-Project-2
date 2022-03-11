@@ -8,16 +8,9 @@ const DogCard = ({ id, name, breed_group, temperament, image }) => {
     setLikes(likes + 1);
   };
 
-
-
-
-
-
-
   return (
     <div className="column $tile-header-shadow is-one-quarter-desktop is-one-third-tablet">
       <Link to={`/dogs/${name.toLowerCase()}`}>
-       
         <div className="tile is-parent" id="cards">
           <article className="tile is-child notification is-grey">
             <p id="card-title" className="title is-4">
