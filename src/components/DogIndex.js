@@ -1,8 +1,10 @@
 import React from 'react';
 import { getAllDogs } from '../lib/api';
 import DogCard from './DogCard';
+import { useNavigate } from 'react-router-dom';
 
 const DogIndex = ({ search, setSearch }) => {
+  const navigate = useNavigate();
   const [dogs, setDogs] = React.useState(null);
 
   React.useEffect(() => {
@@ -17,7 +19,7 @@ const DogIndex = ({ search, setSearch }) => {
     };
     getData();
   }, []);
-  console.log(setSearch);
+  console.log(search);
 
   function filterDogs() {
     return dogs.filter((item) =>
@@ -26,27 +28,40 @@ const DogIndex = ({ search, setSearch }) => {
   }
 
   function handleChange(event) {
+    event.preventDefault();
     setSearch(event.target.value);
+  }
+
+  function handleClick() {
+    navigate(-1);
   }
 
   return (
     <>
-      <div className='dog-index-container'>
-        <section className='section '>
-          <div className='field has-addons' id='searchinput'>
-            <div className='control'>
-              <input
-                onChange={handleChange}
-                className='input is-rounded is-medium is-link'
-                type='text'
-                placeholder='Search for breed'
-                value={search}
-                //   value={props.inputValue}
-                //   onChange={props.dogFilterOnChange}
-              />
-            </div>
+       <div className='dog-index-container'>
+      <section className="section">
+        <div className="field has-addons  " id="searchinput">
+          <div className="control">
+            <input
+              onChange={handleChange}
+              className="input is-rounded is-medium"
+              type="text"
+              placeholder="Search for breed"
+              value={search}
+            />
           </div>
-        </section>
+          <div className="control">
+            <button
+              onClick={handleClick}
+              className="button is-grey is-rounded is-medium"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </section>
+</div>
+
 
         <section className='section' id='dog-section'>
           <div className='container is-dark'>
