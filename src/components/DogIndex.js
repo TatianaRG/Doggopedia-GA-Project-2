@@ -38,30 +38,28 @@ const DogIndex = ({ search, setSearch }) => {
 
   return (
     <>
-       <div className='dog-index-container'>
-      <section className="section">
-        <div className="field has-addons  " id="searchinput">
-          <div className="control">
-            <input
-              onChange={handleChange}
-              className="input is-rounded is-medium"
-              type="text"
-              placeholder="Search for breed"
-              value={search}
-            />
+      <body className='dog-index-container'>
+        <section className='section'>
+          <div className='field has-addons  ' id='searchinput'>
+            <div className='control'>
+              <input
+                onChange={handleChange}
+                className='input is-rounded is-medium'
+                type='text'
+                placeholder='Search for breed'
+                value={search}
+              />
+            </div>
+            <div className='control'>
+              <button
+                onClick={handleClick}
+                className='button is-grey is-rounded is-medium'
+              >
+                Reset
+              </button>
+            </div>
           </div>
-          <div className="control">
-            <button
-              onClick={handleClick}
-              className="button is-grey is-rounded is-medium"
-            >
-              Reset
-            </button>
-          </div>
-        </div>
-      </section>
-</div>
-
+        </section>
 
         <section className='section' id='dog-section'>
           <div className='container is-dark'>
@@ -74,7 +72,7 @@ const DogIndex = ({ search, setSearch }) => {
             </div>
           </div>
         </section>
-      </div>
+      </body>
     </>
   );
 };
