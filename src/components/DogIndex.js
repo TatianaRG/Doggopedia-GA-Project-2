@@ -31,33 +31,35 @@ const DogIndex = ({ search, setSearch }) => {
 
   return (
     <>
-      <section className="section1 ">
-        <div className="field has-addons" id="searchinput">
-          <div className="control">
-            <input
-              onChange={handleChange}
-              className="input is-rounded is-medium is-link"
-              type="text"
-              placeholder="Search for breed"
-              value={search}
-              //   value={props.inputValue}
-              //   onChange={props.dogFilterOnChange}
-            />
+      <div className='dog-index-container'>
+        <section className='section '>
+          <div className='field has-addons' id='searchinput'>
+            <div className='control'>
+              <input
+                onChange={handleChange}
+                className='input is-rounded is-medium is-link'
+                type='text'
+                placeholder='Search for breed'
+                value={search}
+                //   value={props.inputValue}
+                //   onChange={props.dogFilterOnChange}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section1" id="dog-section">
-        <div className="container is-dark">
-          <div className="columns is-multiline">
-            {!dogs ? (
-              <p> Loading...</p>
-            ) : (
-              filterDogs().map((item) => <DogCard key={item.id} {...item} />)
-            )}
+        <section className='section' id='dog-section'>
+          <div className='container is-dark'>
+            <div className='columns is-multiline'>
+              {!dogs ? (
+                <p> Loading...</p>
+              ) : (
+                filterDogs().map((item) => <DogCard key={item.id} {...item} />)
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };
