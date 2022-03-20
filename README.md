@@ -4,10 +4,17 @@
 
 2 days
 
+### Brief
+
+- Consume a public API
+- Have several components - At least one classical and one functional
+- The app should include a router - with several "pages"
+- Be deployed online and accessible to the public
+
 ### Techonologies Used
 
 - JavaScript (ES6)
-- React JS
+- React JS usung functions
 - Git/ GitHub
 - CSS
 - Bulma
@@ -15,3 +22,5 @@
 - Postman
 
 ### APIs used:
+
+TheDogApi
