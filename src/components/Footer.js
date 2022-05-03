@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='footer has-background-grey' id='footer-main'>
       <div className='content has-text-centered'>
         <p>
-          <strong>2022 SEI62</strong>
+          <strong>2022 test SEI62</strong>
         </p>
       </div>
     </footer>
