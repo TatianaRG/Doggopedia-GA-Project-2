@@ -1,0 +1,92 @@
+@import '~bulma/bulma.sass';
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+
+* {
+  font-family: 'Padauk', sans-serif;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+.home-container {
+  padding-bottom: 8%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+}
+
+#dog-show-title {
+  padding-top: 4%;
+  font-size: 50px;
+}
+
+#doggo {
+  border: 2px solid #ececec;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.dogshow-container {
+  background-image: url(../assets/paws-medium.jpg);
+  background-repeat: repeat;
+  background-size: 30%;
+  margin-bottom: 0 auto;
+}
+.dog-index-container {
+  background-image: url(../assets/paws-medium.jpg);
+  background-repeat: repeat;
+  background-size: 30%;
+}
+#dog-section {
+  padding: 5rem 7.5rem;
+  padding-top: 2rem;
+}
+#section_dog_show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem 6rem;
+}
+
+.tile {
+  border: grey solid 2px;
+  border-radius: 10px 10px 10px;
+}
+#show {
+  color: black;
+  font-size: 25px;
+}
+#image-rounded {
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: -7px -1px 23px -4px rgba(0, 0, 0, 0.56);
+}
+#cards {
+  box-shadow: -7px -1px 23px -4px rgba(0, 0, 0, 0.56);
+}
+#searchinput {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: bottom 0;
+  padding-top: 5rem;
+}
+
+
+#footer-main {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 0.5rem; /* Footer height */
+}
+.show-image-container {
+  padding-bottom: 10%;
+}
+
