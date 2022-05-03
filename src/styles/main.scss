@@ -27,7 +27,7 @@
 #doggo {
   border: 2px solid #ececec;
   border-radius: 10px;
-  width: 200px;
+  height: 300px
 }
 
 .dogshow-container {
@@ -35,6 +35,7 @@
   background-repeat: repeat;
   background-size: 30%;
   margin-bottom: 0 auto;
+  height: 100vh
 }
 .dog-index-container {
   background-image: url(../assets/paws-medium.jpg);
@@ -51,7 +52,14 @@
   justify-content: center;
   padding: 4rem 6rem;
 }
+a {
+  color: hsl(0, 0%, 21%);
+}
 
+a:hover {
+  color: gray;
+  text-decoration: underline;
+}
 .tile {
   border: grey solid 2px;
   border-radius: 10px 10px 10px;
@@ -80,13 +88,39 @@
 }
 
 
-#footer-main {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 0.5rem; /* Footer height */
+nav {
+  background-color: hsl(0, 0%, 21%);
+  color: white;
 }
 .show-image-container {
   padding-bottom: 10%;
 }
 
+#footer-main {
+  background-color: hsl(0, 0%, 21%);
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  opacity: 0.8;
+  color: white;
+  margin-top: 0px;
+  position: fixed;
+  font-size: 18px;
+}
+a.footer-links:visited {
+  color: lightgray;
+}
+
+a.footer-links {
+  color: lightgray;
+}
+
+a.footer-links:hover {
+  color: lightgray;
+  text-decoration: underline;
+}
+.nav-items {
+  color: white;
+  font-size: 18px ;
+  padding-left: 12px;
+}
