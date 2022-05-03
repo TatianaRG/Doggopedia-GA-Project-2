@@ -35,6 +35,6 @@ We continued to work as a team to get the basic functionality and aesthetic up a
 
 #### Day 2
 
-On day 2 we had a website which returned a list of dogs which could be clicked to display more detailed information about each breed. I was tasked with building a search bar at the top of the page. I had difficulty returning the correct data, however I found a different endpoint which allowed search by breed. I made a function which would filter through the breeds using an on change event listener. I had a problem in a previous homework where id didn’t really work and wanted the chance to rectify it. The solution to this was to use the .toLowerCase method on both the input and the map of dogs.
+On day 2 we had a website which returned a list of dogs which could be clicked to display more detailed information about each breed. I was tasked with building a search bar at the top of the page. I had difficulty returning the correct data, however I found a different endpoint which allowed search by breed. I made a function which would filter through the breeds using an on change event listener. I had a problem in a previous homework where id didn’t really work and wanted the chance to rectify it. The solution to this was to use the .toLowerCase method on both the input and dog map function.
 
 ![](assets/dogaction.gif)
