@@ -17,6 +17,7 @@
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 5%;
+  // text-shadow: 1px 0 0 grey 0 -1px 0 grey, 0 1px 0 grey, -1px 0 0 grey;
 }
 
 #dog-show-title {
@@ -35,11 +36,14 @@
   background-repeat: repeat;
   background-size: 30%;
   margin-bottom: 0 auto;
+
 }
 .dog-index-container {
   background-image: url(../assets/paws-medium.jpg);
   background-repeat: repeat;
   background-size: 30%;
+  background-attachment: fixed;
+
 }
 #dog-section {
   padding: 5rem 7.5rem;
@@ -60,6 +64,10 @@
   color: black;
   font-size: 25px;
 }
+#show-size {
+  color: black;
+  font-size: 18;
+}
 #image-rounded {
   max-height: 80%;
   max-width: 80%;
@@ -79,14 +87,60 @@
   padding-top: 5rem;
 }
 
-
 #footer-main {
-  position: relative;
+  background-color: hsl(0, 0%, 21%);
   bottom: 0;
   width: 100%;
-  height: 0.5rem; /* Footer height */
-}
-.show-image-container {
-  padding-bottom: 10%;
+  height: 2rem;
+  opacity: 0.8;
+  color: white;
+  position: fixed;
+  font-size: 18px;
+
+  
+  
 }
 
+
+nav {
+  background-color: hsl(0, 0%, 21%);
+  -webkit-box-shadow: -1px 7px 11px -3px #000000;
+  box-shadow: -1px 7px 11px -3px #000000;
+  color: white
+}
+.navbar-item {
+  color: white
+}
+strong {
+  color: white
+}
+.fontstyling{
+font-size: 20px;
+color: white;
+padding-left: 10px;
+}
+
+a {
+  color: hsl(0, 0%, 21%);
+}
+
+a:hover {
+  color: purple;
+  
+}
+a:visited {
+  color: hsl(0, 0%, 21%);
+  text-decoration: underline;
+}
+a.footer-links:visited {
+  color: lightgrey;
+}
+
+a.footer-links {
+  color: lightgray;
+}
+
+a.footer-links:hover {
+  color: lightgray;
+  text-decoration: underline;
+}

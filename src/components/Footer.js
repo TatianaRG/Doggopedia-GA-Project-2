@@ -2,10 +2,38 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='footer has-background-grey' id='footer-main'>
+    <footer id='footer-main'>
       <div className='content has-text-centered'>
         <p>
-          <strong>2022 SEI62</strong>
+          <p>
+            GA-Project-3 | Created by{' '}
+            <a
+              className='footer-links'
+              href='https://github.com/TatianaRG'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Tatiana Guzun
+            </a>
+            ,{' '}
+            <a
+              className='footer-links'
+              href='https://github.com/BeltonJohn/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Matthew Creese
+            </a>{' '}
+            &amp;{' '}
+            <a
+              className='footer-links'
+              href='https://github.com/mstephanou'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Michael Stephanou
+            </a>
+          </p>
         </p>
       </div>
     </footer>
