@@ -10,7 +10,9 @@ Doggopedia was conceived as a group due to our mutual love of dogs. I'm a dog lo
 - Have several components - At least one classical and one functional
 - The app should include a router - with several "pages"
 - Be deployed online and accessible to the public
-- Techonologies Used
+
+### Techonologies Used
+
 - JavaScript (ES6)
 - React JS usung functions
 - Git/ GitHub
