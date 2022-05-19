@@ -97,19 +97,3 @@ const DogShow = () => {
 };
 
 export default DogShow;
-
-// <div className="column is-half is-dark">
-//   <h4 className="title is-8">Breed Group:</h4>
-//   <hr />
-//   <p>{dog.breed_group}</p>
-//   <hr />
-//   <h4 className="title is-4">Origin:</h4>
-//   <hr />
-//   <p>{dog.origin}</p>
-//   <h4 className="title is-4">Lifespan:</h4>
-//   <hr />
-//   <p>{dog.life_span}</p>
-//   <h4 className="title is-4">Temperament:</h4>
-//   <hr />
-//   <p>{dog.temperament}</p>
-// </div>;
